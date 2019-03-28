@@ -11,41 +11,45 @@ div.right {
     scroll-behavior: smooth;
 }
 
-header.start {
+header {
+    height: 100%;
+    position: relative;
+}
+
+div.start {
     margin-left: 10%;
     margin-right: 10%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100%;
 }
 
 div.left {
-    color: azure;
+    color: white;
     width:50%;
     background-image: linear-gradient(to bottom, rgba(12, 12, 24, 0), rgba(5, 5, 11, 0) 58%, rgba(5, 5, 10, 0.49)),url("./content/wallpaper@3x.png");
     background-size: cover;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 div.author {
     width: 20%;
-    font-weight: bold;  
     display: inline-flex;
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 38px;
+    left: 63px;
 }
 
 div.author-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10%;
+    margin-left: 26px;
 }
 
-span.blog {
-    font-size: 14px;
+span.author-name {
+    font-size: 18px;
 }
 
 div.links {
@@ -61,12 +65,15 @@ div.links {
 
 div.back-link {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 58px;
+    left: 73px;
+    font-weight: bold;
+    line-height: 1.63;
     transition: 1s ease;
 }
 
 div.back-link img {
+    margin-right: 6px;
     transition: .3s ease;
 }
 
@@ -77,20 +84,30 @@ div.back-link:hover {
 
 img.my-photo {
     border-radius: 50%;
-    height: 12vh;
-    width: 12vh;
+    height: 108px;
+    width: 108px;
 }
 
 img.my-photo.small{
-    height: 8vh;
-    width: 8vh;
+    height: 80px;
+    width: 80px;
 }
 
+div.middle {
+    margin-bottom: 20px;
+}
 
 div.middle h1 {
     font-family: "Geomanist", sans-serif; 
     font-size: 48px;
     font-weight: normal;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+div.middle p {
+    line-height: 1.56;
+    font-size: 18px;
 }
 
 div.side-elem {
@@ -98,13 +115,14 @@ div.side-elem {
 }
 
 @keyframes slide{
-    0% {opacity: 0; padding-top: 0px}
-    50% {opacity: 1; padding-top: 10px}
-    100% {opacity: 0; padding-top: 20px}
+    0% {opacity: 0; padding-bottom: 20px}
+    50% {opacity: 1; padding-bottom: 10px}
+    100% {opacity: 0; padding-bottom: 0px}
 }
 
 img.sliderimage {
-    right: 10%;
+    right: 47%;
+    bottom: 80px;
     position: absolute;
     animation: slide;
     animation-duration: 2s;
@@ -117,9 +135,8 @@ img.sliderimage {
 }
 
 div.slider {
-    position: relative;
-    height: 10%;
-    margin: 5%;
+    position: absolute;
+    width: 100%;
 }
 
 #unscr-background {
@@ -128,24 +145,40 @@ div.slider {
     overflow: hidden;
 }
 
+#p-about-image {
+    color: grey;
+    font-weight: lighter;
+    margin: 0;
+    text-align: center;
+    opacity: 0.5;
+}
+
 article.page {
     margin-top: 10%;
+    margin-bottom: 72px;
     overflow: hidden;
 }
 
 article.page p, article.page h2,article.page h3,article.page h4{
-    margin-left: 10%;
-    margin-right: 10%;
-    line-height: 1.75;
+    margin-left: 72px;
+    margin-right: 72px;
 }
 
 article.page h2,article.page h3,article.page h4{
+    margin-top: 48px;
+    margin-bottom: 0;
     font-family: "Geomanist", sans-serif;
     font-weight: normal;
 }
 
+article.page p {
+    line-height: 1.75;
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
 article.page h2 {
-    font-size: 43px;
+    font-size: 36px;
 }
 
 article.page h3 {
@@ -158,9 +191,12 @@ article.page h4 {
 
 
 blockquote.quote {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 90px;
+    margin-right: 94px;
+    margin-bottom: 40px;
+    margin-top: 40px ;
     text-align: center;
+    font-style: italic;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     font-size: 20px;
@@ -175,54 +211,62 @@ blockquote.quote {
 }
 
 img.content-img {
-    height: 30vh;
+    height: 290px;
+    margin-bottom: 37px;
     width: auto;
 }
 
 img.img-left {
     float: left;
-    margin-right: 10%;
+    margin-right: 43px;
 }
 
 hr {
     width: 80%;
+    margin-bottom: 40px;
 }
 
 img.img-right {
     float: right;
-    margin-left: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 0;
+    margin-top: 6px;
+    margin-left: 40px;
 }
 
 img.img-centered {
+    margin-top: 16px;
+    margin-bottom: 0;
     width: 100%;
     height: auto;
 }
 
-p.about {
-    color: grey;
-    font-weight: lighter;
-    margin: 0;
-    text-align: center;
-    opacity: 0.5;
+div.author-info-footer {
+    display: inline-flex; 
+    margin-left: 72px; 
+    margin-right: 72px;
+    padding-top: 64px;
+    padding-bottom: 72px;
 }
 
 footer.add-me {
     position: relative;
     width: 100%;
+    height: 306px;
     box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.15);
     background-image: linear-gradient(to bottom, rgba(12, 12, 24, 0), rgba(155, 155, 231, 0) 70%, rgba(5, 5, 10, 0.12));
-    margin-top: 5%;
-    padding-top: 10%;
-    padding-bottom: 10%;
 }
 
 div.contactme {
     font-size: 14px;
     line-height: 1.7;
-    margin-left: 5%;
+    margin-left: 32px;
     display: flex;
     flex-direction: column;
+}
+
+div.contactme p{
+    margin-top: 12px;
+    margin-bottom: 25px;
 }
 
 div.contactme span{
@@ -231,8 +275,7 @@ div.contactme span{
 }
 
 div.subscribe {
-    height: 20%;
-    
+    height: 40px;
 }
 
 div.subscribe input{
@@ -240,12 +283,12 @@ div.subscribe input{
     padding: 0;
     padding-left: 10%;
     padding-right: 10%;
-    width: 80%;
-    height: 5vh;
+    width: 100%;
+    height: inherit;
     border-radius: 20px;
     border: solid 2px rgba(141, 134, 134, 0.5);
     margin: 0;
-    margin-right: -10%;
+    margin-right: -108px;
     font-size: 16px;
     background-image: url("content/mail.svg");
     background-attachment: scroll;
@@ -260,12 +303,12 @@ div.subscribe input{
 }
 
 div.subscribe button {
-    width: 25%;
-    height: 5vh;
+    width: 104px;
     border-radius: 20px;
     background-color: #29b1cc;
     color: white;
     border: solid 2px #29b1cc;
+    height: inherit;
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -283,15 +326,15 @@ div.subscribe button:active {
 
 #share-btn {
     position: absolute;
-    right: 10%;
-    top: -7%;
+    right: 63px;
+    top: -18px;
     border-radius: 50%;
     background-color: #5a5aff;
     background-image: url("content/share.svg");
     background-repeat: no-repeat;
     background-position: center;
-    height: 8vh;
-    width: 8vh;  
+    height: 64px;
+    width: 64px;  
     transform: scale(1);
 	transition: .1s ease-in-out;
 }
@@ -301,8 +344,8 @@ div.subscribe button:active {
 }
 
 img.link {
-    height: 3vh;
-    width: 3vh;
+    height: 24px;
+    width: 24px;
     border: 2px solid rgba(12, 12, 24, 0);
     border-radius: 2px; 
     transition: ease 0.1s;

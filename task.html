@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <title>Lab 2</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="left">
         <div class="author">
             <img class="my-photo small" src="content/ia.jpg" alt="Photo of author">
             <div class="author-info">
-                <span>Danyle Kobryn</span>
-                <span class="blog">— Blog</span>
+                <span class="author-name">Matthew Schwartz</span>
+                <span>— Blog</span>
             </div>
         </div>
         <div class="links">
@@ -27,15 +29,16 @@
         </div>
     </div>
     <div class="right">
-        <header class="start">
-            <div class="side-elem"></div>
-            <div class="middle">
-                <div>
-                    <h1>I Create Website Design,<br> that Makes Sense.</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ut atque porro assumenda? Exercitationem sit quisquam, rem mollitia
-                        fugit sunt incidunt et officia, reiciendis sequi ipsa quod, voluptates dicta perspiciatis.
-                    </p>
+        <header>
+            <div class="start">
+                <div class="middle">
+                    <div>
+                        <h1>I Create Website Design, that Make Sense.</h1>
+                        <p>
+                            When a Web Design Template Makes Sense. In general, you may want to select a pre-configured web design template, when you're
+                            in the following situations …
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="slider">
@@ -64,7 +67,7 @@
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <img class="content-img img-centered" src="content/lake@3x.png" alt="Big lake">
-            <p class="about">A lake is an area filled with water</p>
+            <p id="p-about-image">A lake is an area filled with water</p>
             <hr>
             <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
                 eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
@@ -76,10 +79,8 @@
             <h4>Duis aute irure dolor in reprehenderit</h4>
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
                 sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <!-- <div class="quote"> -->
-                <blockquote class="quote">“At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-                    atque corrupti quos dolores et quas molestias”</blockquote>
-            <!-- </div> -->
+            <blockquote class="quote">“At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+                corrupti quos dolores et quas molestias”</blockquote>
             <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
                 eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
             <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
@@ -94,7 +95,7 @@
         </article>
         <footer class="add-me">
             <button id="share-btn"></button>
-            <div style="display: inline-flex; margin-left: 10%; margin-right: 10%">
+            <div class="author-info-footer">
                 <img class="my-photo" src="content/ia.jpg" alt="Photo of author">
                 <div class="contactme">
                     <span class="name">Matthew Schwartz</span>
@@ -111,11 +112,12 @@
 
 </body>
 <script>
-    function clearPlaceholder(){
-    var resetButton = document.getElementById("subbox");
-    if(resetButton){
-        resetButton.value= "";
+    function clearPlaceholder() {
+        var resetButton = document.getElementById("subbox");
+        if (resetButton) {
+            resetButton.value = "";
+        }
     }
-}
 </script>
+
 </html>
