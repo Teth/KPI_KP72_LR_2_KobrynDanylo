@@ -9,6 +9,7 @@ div.right {
     width: 50%;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    font-size: 18px;
 }
 
 header {
@@ -64,12 +65,17 @@ div.links {
 }
 
 div.back-link {
+    
     position: absolute;
     bottom: 58px;
     left: 73px;
-    font-weight: bold;
     line-height: 1.63;
     transition: 1s ease;
+}
+
+div.back-link span {
+    color: white;
+   text-decoration: none;
 }
 
 div.back-link img {
@@ -107,11 +113,6 @@ div.middle h1 {
 
 div.middle p {
     line-height: 1.56;
-    font-size: 18px;
-}
-
-div.side-elem {
-    margin: 10%;
 }
 
 @keyframes slide{
@@ -155,13 +156,17 @@ div.slider {
 
 article.page {
     margin-top: 10%;
-    margin-bottom: 72px;
-    overflow: hidden;
+    margin-left: var(--paddings-page); 
+    margin-right: var(--paddings-page);
 }
 
-article.page p, article.page h2,article.page h3,article.page h4{
-    margin-left: 72px;
-    margin-right: 72px;
+div.article {
+    overflow: hidden;
+    margin-bottom: 72px;
+}
+
+:root {
+    --paddings-page: 72px;
 }
 
 article.page h2,article.page h3,article.page h4{
@@ -214,11 +219,13 @@ img.content-img {
     height: 290px;
     margin-bottom: 37px;
     width: auto;
+
 }
 
 img.img-left {
     float: left;
     margin-right: 43px;
+    margin-left: calc(0px - var(--paddings-page));
 }
 
 hr {
@@ -231,13 +238,17 @@ img.img-right {
     margin-bottom: 0;
     margin-top: 6px;
     margin-left: 40px;
+    margin-right: calc(0px - var(--paddings-page));
 }
 
 img.img-centered {
+    margin-left: calc(0px - var(--paddings-page));
+    margin-right: calc(0px - var(--paddings-page));
     margin-top: 16px;
     margin-bottom: 0;
-    width: 100%;
+    width: calc(100% + 2*(var(--paddings-page)));
     height: auto;
+    
 }
 
 div.author-info-footer {
@@ -245,7 +256,6 @@ div.author-info-footer {
     margin-left: 72px; 
     margin-right: 72px;
     padding-top: 64px;
-    padding-bottom: 72px;
 }
 
 footer.add-me {
